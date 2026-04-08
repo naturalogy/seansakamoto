@@ -1,0 +1,105 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-raleway), sans-serif;
+  --font-serif: var(--font-noto-serif-jp), serif;
+  --font-ephesis: var(--font-ephesis), cursive;
+}
+@plugin 'daisyui';
+
+@plugin 'daisyui/theme' {
+  name: 'light';
+  default: true;
+  --color-base-100: hsl(212, 8%, 100%);
+  --color-base-200: hsl(212, 8%, 96%);
+  --color-base-300: hsl(212, 10%, 92%);
+  --color-base-content: hsl(212, 22%, 16%);
+  --color-primary: hsl(212, 96%, 50%);
+  --color-primary-content: hsl(212, 96%, 96%);
+  --color-secondary: hsl(212, 48%, 44%);
+  --color-secondary-content: hsl(212, 48%, 96%);
+  --color-accent: hsl(162, 73%, 46%);
+  --color-accent-content: hsl(162, 73%, 4%);
+  --color-neutral: hsl(212, 20%, 26%);
+  --color-neutral-content: hsl(212, 20%, 96%);
+  --color-info: hsl(190, 86%, 55%);
+  --color-info-content: hsl(190, 86%, 4%);
+  --color-success: hsl(152, 65%, 35%);
+  --color-success-content: hsl(152, 65%, 96%);
+  --color-warning: hsl(40, 90%, 60%);
+  --color-warning-content: hsl(40, 90%, 4%);
+  --color-error: hsl(354, 80%, 52%);
+  --color-error-content: hsl(354, 80%, 96%);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  body {
+    @apply leading-7 text-slate-800;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-xl font-bold;
+  }
+
+  h5 {
+    @apply text-lg font-bold;
+  }
+
+  h6 {
+    @apply font-bold;
+  }
+
+  legend {
+    @apply text-xl font-bold;
+  }
+
+  .label {
+    @apply w-full text-sm font-semibold;
+  }
+}
+
+/* Page: subtle directional gradient using theme tokens */
+#page {
+  background: linear-gradient(
+    135deg,
+    var(--color-neutral-600) 0%,
+    var(--color-neutral-800) 100%
+  );
+
+  /* Card entrance — spring-like fade-up on load */
+  & > main {
+    animation: card-in 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(32px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

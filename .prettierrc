@@ -1,0 +1,23 @@
+{
+  "bracketSameLine": true,
+  "jsxSingleQuote": true,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "importOrder": [
+    "^react",
+    "^next",
+    "<THIRD_PARTY_MODULES>",
+    "^payload(.*)",
+    "^@payload(.*)",
+    "^@/payload(.*)",
+    "^@/hooks/(.*)",
+    "^@/stores/(.*)",
+    "^@/components/(.*)",
+    "^[./]"
+  ]
+}
