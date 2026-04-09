@@ -3,6 +3,7 @@
 const isProd = process.env.NODE_ENV === 'production'
 const nextConfig = {
   reactStrictMode: isProd,
+  output: 'export',
   images: {
     unoptimized: true,
   },
