@@ -42,7 +42,7 @@
   }
 
   body {
-    @apply leading-7 text-base-content;
+    @apply leading-7 text-slate-800;
   }
 
   h1 {

@@ -58,6 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang='en'
+      data-theme='light'
       className={`${raleway.variable} ${notoSerifJP.variable} ${ephesis.variable}`}>
       <body>{children}</body>
     </html>
