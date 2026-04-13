@@ -41,9 +41,7 @@ const SOCIALS = [
 /** Home — digital business card */
 export default function Home() {
   return (
-    <div
-      id='page'
-      className='flex min-h-screen items-center justify-center p-6'>
+    <div id='page' className='flex min-h-dvh items-center justify-center p-6'>
       <main className='card bg-base-100 w-full max-w-sm overflow-hidden shadow-2xl'>
         {/* Gradient accent bar */}
         <div className='from-secondary via-accent to-success h-1 bg-linear-to-r' />
