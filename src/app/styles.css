@@ -95,7 +95,7 @@
 @keyframes card-in {
   from {
     opacity: 0;
-    transform: translateY(32px) scale(0.98);
+    transform: translateY(2rem) scale(0.98);
   }
 
   to {
